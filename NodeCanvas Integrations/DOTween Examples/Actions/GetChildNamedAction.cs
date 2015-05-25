@@ -1,5 +1,7 @@
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.CInput.Examples
 {
@@ -8,10 +10,10 @@ namespace NodeCanvasAddons.CInput.Examples
     public class GetChildNamedAction : ActionTask
     {
         [RequiredField]
-        public BBString ChildName;
+        public BBParameter<string> ChildName;
 
         [BlackboardOnly]
-        public BBGameObject MatchingObject = new BBGameObject();
+        public BBParameter<GameObject> MatchingObject = new BBParameter<GameObject>();
 
         protected override string info
         {

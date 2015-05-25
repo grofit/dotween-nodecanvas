@@ -1,15 +1,14 @@
 ﻿using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 [Category("Materials")]
 [Name("Change Material Colour")]
-public class SetMaterialColorAction : ActionTask
+public class SetMaterialColorAction : ActionTask<Renderer>
 {
     [RequiredField]
-    public BBColor Color;
-
-    public BBGameObject TargetIfNotSelf;
+    public BBParameter<Color> Color;
 
     protected override string info
     {
@@ -18,10 +17,7 @@ public class SetMaterialColorAction : ActionTask
 
     protected override void OnExecute()
     {
-        if (TargetIfNotSelf.isNull || TargetIfNotSelf.isNone)
-        { agent.renderer.material.color = Color.value; }
-        else
-        { TargetIfNotSelf.value.renderer.material.color = Color.value; }
+        agent.material.color = Color.value;
     
         EndAction(true);
     }
