@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -13,18 +15,18 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     public class CreatePathTween : ActionTask
     {
         [RequiredField]
-        public BBVectorList VectorPath;
+        public BBParameter<List<Vector3>> VectorPath;
         
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         public PathType PathType = PathType.Linear; 
         public PathMode PathMode = PathMode.Full3D; 
 
-        public BBInt Resolution = new BBInt{ value = 10 };
+        public BBParameter<int> Resolution = new BBParameter<int>{ value = 10 };
 
         [BlackboardOnly] 
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

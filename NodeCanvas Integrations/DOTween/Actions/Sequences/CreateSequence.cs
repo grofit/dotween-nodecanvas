@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Sequences
@@ -14,7 +14,7 @@ namespace NodeCanvasAddons.DOTween.Sequences
     public class CreateSequence : ActionTask
     {
         [BlackboardOnly]
-        public BBSequence CreatedSequence;
+        public BBParameter<Sequence> CreatedSequence;
 
         protected override string info
         {

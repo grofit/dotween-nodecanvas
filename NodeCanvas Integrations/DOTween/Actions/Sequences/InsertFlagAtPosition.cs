@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Sequences
 {
@@ -14,13 +14,13 @@ namespace NodeCanvasAddons.DOTween.Sequences
     {
         [RequiredField]
         [BlackboardOnly]
-        public BBSequence Sequence;
+        public BBParameter<Sequence> Sequence;
 
         [RequiredField]
-        public BBBool FlagVariable;
+        public BBParameter<bool> FlagVariable;
 
         [RequiredField]
-        public BBFloat TimePosition;
+        public BBParameter<float> TimePosition;
 
         protected override string info
         {

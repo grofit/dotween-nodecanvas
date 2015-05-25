@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.LineRenderer
 {
@@ -14,16 +15,16 @@ namespace NodeCanvasAddons.DOTween.Tweens.LineRenderer
     public class CreateColourTween : ActionTask
     {
         [RequiredField]
-        public BBColor StartColour;
+        public BBParameter<Color> StartColour;
 
         [RequiredField]
-        public BBColor EndColour;
+        public BBParameter<Color> EndColour;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

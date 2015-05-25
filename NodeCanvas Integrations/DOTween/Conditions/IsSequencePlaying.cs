@@ -1,19 +1,19 @@
-﻿using Assets.NodeCanvasAddons.DOTween.Types;
-using DG.Tweening;
+﻿using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.CInput
 {
     [Category("DOTween")]
-    [Name("Is Sequnece Playing")]
+    [Name("Is Sequence Playing")]
     [Description("Checks to see the if the sequence is playing")]
     [Icon("DOTweenTween")]
     public class IsSequencePlaying : ConditionTask
     {
         [RequiredField]
         [BlackboardOnly]
-        public BBSequence Sequence;
+        public BBParameter<Sequence> Sequence;
 
         protected override bool OnCheck()
         {

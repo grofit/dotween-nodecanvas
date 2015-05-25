@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.RigidBody2D
@@ -15,14 +15,14 @@ namespace NodeCanvasAddons.DOTween.Tweens.RigidBody2D
     public class CreateRotationTween : ActionTask
     {
         [RequiredField]
-        public BBVector2 Rotation;
+        public BBParameter<Vector2> Rotation;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
         public RotateMode RotateMode;
 
         [BlackboardOnly] 
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

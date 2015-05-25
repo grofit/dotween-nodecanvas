@@ -1,7 +1,7 @@
-﻿using Assets.NodeCanvasAddons.DOTween.Types;
-using DG.Tweening;
+﻿using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.CInput
 {
@@ -13,7 +13,7 @@ namespace NodeCanvasAddons.CInput
     {
         [RequiredField]
         [BlackboardOnly]
-        public BBTween Tween;
+        public BBParameter<Tween> Tween;
 
         protected override bool OnCheck()
         {

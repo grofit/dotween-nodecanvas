@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens.TrailRenderer
 {
@@ -14,13 +14,13 @@ namespace NodeCanvasAddons.DOTween.Tweens.TrailRenderer
     public class CreateTimeTween : ActionTask
     {
         [RequiredField]
-        public BBFloat EndValue;
+        public BBParameter<float> EndValue;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

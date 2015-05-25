@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -12,15 +13,15 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     [Icon("DOTweenTween")]
     public class CreateRotationTween : ActionTask
     {
-        public BBVector DestinationRotation;
-        public BBGameObject DestinationGameObject;
+        public BBParameter<Vector3> DestinationRotation;
+        public BBParameter<GameObject> DestinationGameObject;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
         public RotateMode RotateMode;
 
         [BlackboardOnly] 
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

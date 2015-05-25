@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens
 {
@@ -12,12 +12,12 @@ namespace NodeCanvasAddons.DOTween.Tweens
     [Icon("DOTweenTween")]
     public class InitializeDOTween : ActionTask
     {
-        public BBBool RecycleAllByDefault = new BBBool {value = true};
-        public BBBool UseSafeMode = new BBBool{value = true};
+        public BBParameter<bool> RecycleAllByDefault = new BBParameter<bool> {value = true};
+        public BBParameter<bool> UseSafeMode = new BBParameter<bool>{value = true};
         public LogBehaviour LogBehaviour;
 
-        public BBInt ExpectedMaximumConcurrentTweens = new BBInt{value = 100 };
-        public BBInt ExpectedMaximumConcurrentSequences = new BBInt { value = 10 };
+        public BBParameter<int> ExpectedMaximumConcurrentTweens = new BBParameter<int>{value = 100 };
+        public BBParameter<int> ExpectedMaximumConcurrentSequences = new BBParameter<int> { value = 10 };
 
 
         protected override string info

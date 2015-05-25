@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens
 {
@@ -14,10 +14,10 @@ namespace NodeCanvasAddons.DOTween.Tweens
     {
         [RequiredField]
         [BlackboardOnly]
-        public BBTween Tween;
+        public BBParameter<Tween> Tween;
 
         [RequiredField]
-        public BBFloat Delay;
+        public BBParameter<float> Delay;
 
         protected override string info
         {

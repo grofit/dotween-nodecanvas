@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -10,16 +11,16 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     [Name("Create Colour Tween")]
     [Description("Creates a colour tween for configuration or use")]
     [Icon("DOTweenTween")]
-    public class CreateColourTween : ActionTask
+    public class CreateColourTween : ActionTask<Renderer>
     {
         [RequiredField]
-        public BBColor NewColour;
+        public BBParameter<Color> NewColour;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {
@@ -39,7 +40,7 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 
         protected override void OnExecute()
         {
-            var tweener = agent.renderer.material.DOColor(NewColour.value, Duration.value);
+            var tweener = agent.material.DOColor(NewColour.value, Duration.value);
             tweener.Pause();
 
             CreatedTween.value = tweener;

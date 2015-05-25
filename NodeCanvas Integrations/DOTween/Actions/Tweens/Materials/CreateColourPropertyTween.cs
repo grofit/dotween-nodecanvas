@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.Materials
 {
@@ -13,19 +14,19 @@ namespace NodeCanvasAddons.DOTween.Tweens.Materials
     public class CreateColourPropertyTween : ActionTask
     {
         [RequiredField] 
-        public BBMaterial Material;
+        public BBParameter<Material> Material;
 
         [RequiredField]
-        public BBColor NewColour;
+        public BBParameter<Color> NewColour;
 
         [RequiredField]
-        public BBString PropertyName;
+        public BBParameter<string> PropertyName;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

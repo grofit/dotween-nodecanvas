@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens.SpriteRenderer
 {
@@ -13,13 +13,13 @@ namespace NodeCanvasAddons.DOTween.Tweens.SpriteRenderer
     public class CreateFadeTween : ActionTask
     {
         [RequiredField]
-        public BBFloat Opacity;
+        public BBParameter<float> Opacity;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

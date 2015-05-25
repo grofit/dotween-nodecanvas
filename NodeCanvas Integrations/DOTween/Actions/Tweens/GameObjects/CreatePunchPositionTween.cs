@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -13,18 +14,18 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     public class CreatePunchPositionTween : ActionTask
     {
         [RequiredField]
-        public BBVector PunchVector;
+        public BBParameter<Vector3> PunchVector;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
-        public BBInt Vibration = new BBInt { value = 10 };
-        public BBFloat Elasticity = new BBFloat { value = 1.0f };
+        public BBParameter<int> Vibration = new BBParameter<int> { value = 10 };
+        public BBParameter<float> Elasticity = new BBParameter<float> { value = 1.0f };
 
-        public BBBool UseSnapping;
+        public BBParameter<bool> UseSnapping;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

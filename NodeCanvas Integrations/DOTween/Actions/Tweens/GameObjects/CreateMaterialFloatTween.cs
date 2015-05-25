@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -10,19 +11,19 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     [Name("Create Material Float Tween")]
     [Description("Creates a float tween for configuration or use")]
     [Icon("DOTweenTween")]
-    public class CreateMaterialFloatTween : ActionTask
+    public class CreateMaterialFloatTween : ActionTask<Renderer>
     {
         [RequiredField]
-        public BBFloat Value;
+        public BBParameter<float> Value;
 
         [RequiredField]
-        public BBString PropertyName;
+        public BBParameter<string> PropertyName;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {
@@ -38,7 +39,7 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 
         protected override void OnExecute()
         {
-            var tweener = agent.renderer.material.DOFloat(Value.value, PropertyName.value, Duration.value);
+            var tweener = agent.material.DOFloat(Value.value, PropertyName.value, Duration.value);
             tweener.Pause();
 
             CreatedTween.value = tweener;

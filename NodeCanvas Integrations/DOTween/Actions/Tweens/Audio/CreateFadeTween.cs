@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.Audio
@@ -15,13 +15,13 @@ namespace NodeCanvasAddons.DOTween.Tweens.Audio
     public class CreateFadeTween : ActionTask
     {
         [RequiredField]
-        public BBFloat Fade;
+        public BBParameter<float> Fade;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

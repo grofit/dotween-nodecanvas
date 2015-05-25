@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.Lights
@@ -15,13 +15,13 @@ namespace NodeCanvasAddons.DOTween.Tweens.Lights
     public class CreateIntensityTween : ActionTask
     {
         [RequiredField]
-        public BBFloat Intensity;
+        public BBParameter<float> Intensity;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

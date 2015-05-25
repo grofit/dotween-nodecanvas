@@ -1,7 +1,8 @@
 using System.Text;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens
 {
@@ -11,7 +12,7 @@ namespace NodeCanvasAddons.DOTween.Tweens
     [Icon("DOTweenTween")]
     public class KillTweens : ActionTask
     {
-        public BBBool ShouldComplete;
+        public BBParameter<bool> ShouldComplete;
 
         protected override string info
         {

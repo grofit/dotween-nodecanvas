@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.RigidBody
@@ -15,14 +15,14 @@ namespace NodeCanvasAddons.DOTween.Tweens.RigidBody
     public class CreateLookAtTween : ActionTask
     {
         [RequiredField]
-        public BBVector LookAt;
+        public BBParameter<Vector3> LookAt;
 
         [RequiredField]
-        public BBFloat Duration;
+        public BBParameter<float> Duration;
         public AxisConstraint AxisConstraint;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

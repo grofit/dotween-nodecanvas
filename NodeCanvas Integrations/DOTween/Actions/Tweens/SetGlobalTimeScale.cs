@@ -1,6 +1,7 @@
 using System.Text;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 
 namespace NodeCanvasAddons.DOTween.Tweens
 {
@@ -11,7 +12,7 @@ namespace NodeCanvasAddons.DOTween.Tweens
     public class SetGlobalTimeScale : ActionTask
     {
         [RequiredField]
-        public BBFloat TimeScale;
+        public BBParameter<float> TimeScale;
 
         protected override string info
         {

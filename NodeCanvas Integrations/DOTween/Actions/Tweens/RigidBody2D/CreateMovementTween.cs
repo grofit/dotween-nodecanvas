@@ -1,8 +1,8 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
 using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.RigidBody2D
@@ -15,14 +15,14 @@ namespace NodeCanvasAddons.DOTween.Tweens.RigidBody2D
     public class CreateMovementTween : ActionTask
     {
         [RequiredField]
-        public BBVector2 Destination;
+        public BBParameter<Vector2> Destination;
 
         [RequiredField]
-        public BBFloat Duration;
-        public BBBool UseSnapping;
+        public BBParameter<float> Duration;
+        public BBParameter<bool> UseSnapping;
 
         [BlackboardOnly] 
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {

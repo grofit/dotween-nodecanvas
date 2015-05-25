@@ -1,8 +1,9 @@
 using System.Text;
-using Assets.NodeCanvasAddons.DOTween.Types;
 using DG.Tweening;
 using NodeCanvas;
-using NodeCanvas.Variables;
+using NodeCanvas.Framework;
+using ParadoxNotion.Design;
+using UnityEngine;
 
 namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
 {
@@ -13,14 +14,14 @@ namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
     public class CreateMovementToObjectTween : ActionTask
     {
         [RequiredField]
-        public BBGameObject DestinationObject;
+        public BBParameter<GameObject> DestinationObject;
 
         [RequiredField]
-        public BBFloat Duration;
-        public BBBool UseSnapping;
+        public BBParameter<float> Duration;
+        public BBParameter<bool> UseSnapping;
 
         [BlackboardOnly]
-        public BBTween CreatedTween;
+        public BBParameter<Tween> CreatedTween;
 
         protected override string info
         {
