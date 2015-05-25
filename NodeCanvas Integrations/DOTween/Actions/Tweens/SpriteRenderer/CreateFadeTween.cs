@@ -4,7 +4,7 @@ using NodeCanvas;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 
-namespace NodeCanvasAddons.DOTween.Tweens.SpriteRenderer
+namespace NodeCanvas.Tasks.DOTween.Tweens.SpriteRenderer
 {
     [Category("DOTween/Tweens/SpriteRenderer")]
     [Name("Create Fade Tween")]

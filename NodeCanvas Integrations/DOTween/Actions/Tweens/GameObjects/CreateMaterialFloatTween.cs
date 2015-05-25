@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.GameObjects
+namespace NodeCanvas.Tasks.DOTween.Tweens.GameObjects
 {
     [Category("DOTween/Tweens/GameObjects")]
     [Name("Create Material Float Tween")]

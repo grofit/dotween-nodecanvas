@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Sequences
+namespace NodeCanvas.Tasks.DOTween.Sequences
 {
     [Category("DOTween/Sequences")]
     [Name("Create Sequences")]

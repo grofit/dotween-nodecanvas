@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.SpriteRenderer
+namespace NodeCanvas.Tasks.DOTween.Tweens.SpriteRenderer
 {
     [Category("DOTween/Tweens/SpriteRenderer")]
     [Name("Create Colour Tween")]

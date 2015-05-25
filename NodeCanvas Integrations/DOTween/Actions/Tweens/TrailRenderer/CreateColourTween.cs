@@ -4,7 +4,7 @@ using NodeCanvas;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 
-namespace NodeCanvasAddons.DOTween.Tweens.TrailRenderer
+namespace NodeCanvas.Tasks.DOTween.Tweens.TrailRenderer
 {
     [Category("DOTween/Tweens/TrailRenderer")]
     [Name("Create Resize Tween")]

@@ -3,7 +3,7 @@ using NodeCanvas;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 
-namespace NodeCanvasAddons.CInput
+namespace NodeCanvas.Tasks.DOTween.CInput
 {
     [Category("DOTween")]
     [Name("Is Sequence Playing")]

@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.Audio
+namespace NodeCanvas.Tasks.DOTween.Tweens.Audio
 {
     [Category("DOTween/Tweens/Audio")]
     [Name("Create Pitch Tween")]

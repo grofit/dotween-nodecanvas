@@ -6,7 +6,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.Materials
+namespace NodeCanvas.Tasks.DOTween.Tweens.Materials
 {
     [Category("DOTween/Tweens/Materials")]
     [Name("Create Colour Tween")]
