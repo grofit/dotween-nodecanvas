@@ -3,22 +3,24 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-[Category("Materials")]
-[Name("Change Material Colour")]
-public class SetMaterialColorAction : ActionTask<Renderer>
+namespace NodeCanvas.Tasks.DOTween.CInput.Examples
 {
-    [RequiredField]
-    public BBParameter<Color> Color;
-
-    protected override string info
+    [Category("Materials")]
+    [Name("Change Material Colour")]
+    public class SetMaterialColorAction : ActionTask<Renderer>
     {
-        get { return string.Format("Changing Color To <b>{0}</b>", Color.value); }
-    }
+        [RequiredField] public BBParameter<Color> Color;
 
-    protected override void OnExecute()
-    {
-        agent.material.color = Color.value;
-    
-        EndAction(true);
+        protected override string info
+        {
+            get { return string.Format("Changing Color To <b>{0}</b>", Color.value); }
+        }
+
+        protected override void OnExecute()
+        {
+            agent.material.color = Color.value;
+
+            EndAction(true);
+        }
     }
 }

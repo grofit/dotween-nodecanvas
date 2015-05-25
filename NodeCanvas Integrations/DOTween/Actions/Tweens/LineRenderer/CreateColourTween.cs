@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.LineRenderer
+namespace NodeCanvas.Tasks.DOTween.Tweens.LineRenderer
 {
     [Category("DOTween/Tweens/LineRenderer")]
     [Name("Create Colour Tween")]

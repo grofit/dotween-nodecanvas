@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.RigidBody
+namespace NodeCanvas.Tasks.DOTween.Tweens.RigidBody
 {
     [Category("DOTween/Tweens/RigidBody")]
     [Name("Create Movement To Position Tween")]

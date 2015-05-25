@@ -5,7 +5,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.DOTween.Tweens.Lights
+namespace NodeCanvas.Tasks.DOTween.Tweens.Lights
 {
     [Category("DOTween/Tweens/Lights")]
     [Name("Create Shadow Strength Tween")]

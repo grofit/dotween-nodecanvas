@@ -3,7 +3,7 @@ using NodeCanvas;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 
-namespace NodeCanvasAddons.DOTween.Tweens
+namespace NodeCanvas.Tasks.DOTween.Tweens
 {
     [Category("DOTween/Tweens")]
     [Name("Set Time Scale")]

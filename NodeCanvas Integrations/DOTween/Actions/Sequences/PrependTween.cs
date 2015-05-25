@@ -4,7 +4,7 @@ using NodeCanvas;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 
-namespace NodeCanvasAddons.DOTween.Sequences
+namespace NodeCanvas.Tasks.DOTween.Sequences
 {
     [Category("DOTween/Sequences")]
     [Name("Prepend Tween")]

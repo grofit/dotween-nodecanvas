@@ -3,7 +3,7 @@ using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
 
-namespace NodeCanvasAddons.CInput.Examples
+namespace NodeCanvas.Tasks.DOTween.CInput.Examples
 {
     [Category("GameObject")]
     [Name("Get Child Named")]
