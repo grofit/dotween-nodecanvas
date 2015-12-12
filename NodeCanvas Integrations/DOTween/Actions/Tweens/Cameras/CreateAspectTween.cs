@@ -9,7 +9,7 @@ namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
 {
     [Category("DOTween/Tweens/Camera")]
     [Name("Create Aspect Tween")]
-    [Description("Creates a camera aspect tween for configuration or use")]
+    [Description("Creates an aspect tween for configuration or use")]
     [Icon("DOTweenTween")]
     [AgentType(typeof(Camera))]
     public class CreateAspectTween : ActionTask
