@@ -8,8 +8,8 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
 {
     [Category("DOTween/Tweens/Camera")]
-    [Name("Create Rect Tween")]
-    [Description("Creates a rect tween for configuration or use")]
+    [Name("Create Camera Rect Tween")]
+    [Description("Creates a camera rect tween for configuration or use")]
     [Icon("DOTweenTween")]
     [AgentType(typeof(Camera))]
     public class CreateRectTween : ActionTask
@@ -26,7 +26,7 @@ namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
             get
             {
                 var descriptionBuilder = new StringBuilder();
-                descriptionBuilder.AppendFormat("Rect Tween To {0}", To.value);
+                descriptionBuilder.AppendFormat("Camera Rect Tween To {0}", To.value);
                 
                 if (!Duration.isNone && !Duration.isNull)
                 { descriptionBuilder.AppendFormat("\nIn {0}", Duration); }
