@@ -10,8 +10,8 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
 {
     [Category("DOTween/Tweens/Camera")]
-    [Name("Create Shake Position Tween (Float Strength)")]
-    [Description("Creates a shake position tween with float strength for configuration or use")]
+    [Name("Create Camera Shake Position Tween (Float Strength)")]
+    [Description("Creates a camera shake position tween with float strength for configuration or use")]
     [Icon("DOTweenTween")]
     [AgentType(typeof(Camera))]
     public class CreateShakePositionFloatTween : ActionTask
@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
             {
                 var descriptionBuilder = new StringBuilder();
 
-                descriptionBuilder.AppendFormat("Shake Position Tween With Strength of {0}", Strength.value);
+                descriptionBuilder.AppendFormat("Camera Shake Position Tween With Strength of {0}", Strength.value);
 
                 descriptionBuilder.AppendFormat("\nWith vibrato of {0}", vibrato.value);
 

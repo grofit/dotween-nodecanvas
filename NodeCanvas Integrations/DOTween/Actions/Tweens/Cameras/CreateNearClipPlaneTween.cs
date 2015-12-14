@@ -8,7 +8,7 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
 {
     [Category("DOTween/Tweens/Camera")]
-    [Name("Create Near Clip Plane Tween")]
+    [Name("Create Camera Near Clip Plane Tween")]
     [Description("Creates a camera near clip plane tween for configuration or use")]
     [Icon("DOTweenTween")]
     [AgentType(typeof(Camera))]
@@ -26,7 +26,7 @@ namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
             get
             {
                 var descriptionBuilder = new StringBuilder();
-                descriptionBuilder.AppendFormat("Near Clip Plane Tween To {0}", To.value);
+                descriptionBuilder.AppendFormat("Camera Near Clip Plane Tween To {0}", To.value);
                 
                 if (!Duration.isNone && !Duration.isNull)
                 { descriptionBuilder.AppendFormat("\nIn {0}", Duration); }

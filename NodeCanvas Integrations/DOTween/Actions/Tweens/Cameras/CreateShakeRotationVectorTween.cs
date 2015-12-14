@@ -10,8 +10,8 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
 {
     [Category("DOTween/Tweens/Camera")]
-    [Name("Create Shake Rotation Tween (Vector3 Strength)")]
-    [Description("Creates a shake rotation tween with vector strength for configuration or use")]
+    [Name("Create Camera Shake Rotation Tween (Vector3 Strength)")]
+    [Description("Creates a camera shake rotation tween with vector strength for configuration or use")]
     [Icon("DOTweenTween")]
     [AgentType(typeof(Camera))]
     public class CreateShakeRotationVectorTween : ActionTask
@@ -31,7 +31,7 @@ namespace NodeCanvas.Tasks.DOTween.Tweens.Cameras
             {
                 var descriptionBuilder = new StringBuilder();
 
-                descriptionBuilder.AppendFormat("Shake Rotation Tween With Strength of {0}", Strength.value);
+                descriptionBuilder.AppendFormat("Camera Shake Rotation Tween With Strength of {0}", Strength.value);
 
                 descriptionBuilder.AppendFormat("\nWith vibrato of {0}", vibrato.value);
 
