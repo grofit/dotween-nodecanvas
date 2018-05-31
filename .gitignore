@@ -1,0 +1,11 @@
+.vs
+/src/Assets/ParadoxNotion
+/src/Assets/Demigiant
+
+src/Library/
+
+src/Assets/ParadoxNotion\.meta
+
+src/Assets/Demigiant\.meta
+
+*.unitypackage
